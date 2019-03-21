@@ -1,0 +1,10 @@
+RewriteEngine On
+
+RewriteBase /
+
+<Files .*>
+	Order Deny,Allow
+	Deny From All
+</Files>
+
+RewriteRule ^(?:application|modules|system)\b.* index.php/$0 [L]
